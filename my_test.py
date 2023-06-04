@@ -20,6 +20,8 @@ from detectron2.data import MetadataCatalog, DatasetCatalog
 
 
 sys.path.insert(0, 'third_party/CenterNet2/')
+
+
 from centernet.config import add_centernet_config
 from detic.config import add_detic_config
 from detic.modeling.utils import reset_cls_test
@@ -61,7 +63,7 @@ reset_cls_test(predictor.model, classifier, num_classes)
 
 import matplotlib.pyplot as plt
 
-im = cv2.imread("./my_photo.jpg")
+im = cv2.imread("unn-deep-learning/my_photo.jpg")
 # cv2.imshow("image", im)
 # cv2.waitKey(3000)
 # cv2.destroyAllWindows()
@@ -99,7 +101,7 @@ out = v.draw_instance_predictions(outputs["instances"].to("cpu"))
 # cv2.imshow("image", out.get_image()[:, :, ::-1])
 # cv2.waitKey(3000)
 # cv2.destroyAllWindows()
-cv2.imwrite("./my_photo_detected.jpg", out.get_image()[:, :, ::-1])
+cv2.imwrite("unn-deep-learning/my_photo_detected.jpg", out.get_image()[:, :, ::-1])
 
 # save results of test
 import json
@@ -121,7 +123,7 @@ for elem in arr:
 # print(f"your result: \n{result}")
 
 
-with open("true_result.json", "r") as fh:
+with open("unn-deep-learning/true_result.json", "r") as fh:
     true_result = json.load(fh)
 
 # with open("true_result.json", "w") as fh:
