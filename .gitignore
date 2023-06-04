@@ -13,7 +13,7 @@ output
 instant_test_output
 inference_test_output
 
-
+*.DS_Store
 *.png
 *.diff
 *.jpg
