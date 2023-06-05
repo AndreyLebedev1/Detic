@@ -12,7 +12,6 @@ import numpy as np
 import os, json, cv2, random
 
 
-from detectron2 import model_zoo
 from detectron2.engine import DefaultPredictor
 from detectron2.config import get_cfg
 from detectron2.utils.visualizer import Visualizer
